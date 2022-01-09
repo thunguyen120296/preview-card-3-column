@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --trans-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+body{
+    background-color: var(--light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+}
+h2{
+    margin: 32px 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    color: var(--light-gray);
+}
+p{
+    font-size: 1.0em;
+    color: var(--trans-white);
+}
+
+.main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+}
+.card__box__one,
+.card__box__two,
+.card__box__three{
+    padding: 36px;
+    min-height: 450px;
+}
+.card__box__one{
+    background-color: var(--bright-orange);
+    border-radius: 12px 0 0 12px;
+}
+.card__box__two{
+    background-color: var(--dark-cyan);
+}
+.card__box__three{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 12px 12px 0;
+}
+.btnLearnMore{
+    border: none;
+    background-color: var(--light-gray);
+    padding: 16px 36px;
+    border-radius: 30px;
+    margin-top: 52px;
+    font-size: 1.2em;
+}
+.btnLearnMore:hover{
+    background-color: transparent;
+    border: 1px solid var(--trans-white);
+}
+
+.card__box__one .btnLearnMore{
+    color: var(--bright-orange);
+}
+.card__box__two .btnLearnMore{
+    color: var(--dark-cyan);
+}
+.card__box__three .btnLearnMore{
+    color: var(--very-dark-cyan);
+}
+.card__box__one .btnLearnMore:hover,
+.card__box__one .btnLearnMore:active,
+.card__box__one .btnLearnMore:visited,
+.card__box__two .btnLearnMore:hover,
+.card__box__two .btnLearnMore:active,
+.card__box__two .btnLearnMore:visited,
+.card__box__three .btnLearnMore:hover,
+.card__box__three .btnLearnMore:active,
+.card__box__three .btnLearnMore:visited{
+    color: var(--light-gray);
+}
+.attribution{
+    margin-bottom: 36px;
+}
+@media screen and (max-width: 991px){
+    .card__box{
+        max-width: 700px;
+    }
+    .btnLearnMore{
+        padding: 8px 24px;
+        font-size: 1.0em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main{
+        height: auto;
+    }
+    .card__box{
+        margin: 52px 16px;
+        grid-template-columns: 1fr;
+    }
+    .card__box__one{
+        border-radius: 12px 12px 0 0;
+    }
+    .card__box__three{
+        border-radius: 0 0 12px 12px;
+    }
+}
